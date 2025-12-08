@@ -42,8 +42,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   shivani_dbt_workshop:
-      example:
-          schema: example 
+      # example:
+      #     schema: example 
       silver:
           schema: silver
           materialized: table
