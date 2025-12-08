@@ -10,9 +10,16 @@ config-version: 2
 profile: 'default'
 
 vars:
-   target_db: GLUEDB
-   target_schema: PUBLIC
-   stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
+   wrk_schema: BRONZE
+   file_format_json: MYDB.BRONZE.MY_CSV_FORMAT
+   purge_status: FALSE
+   stage_name: MYDB.BRONZE.s3_test_stage/
+   rawhist_db: MYDB
+
+# vars:
+#    target_db: GLUEDB
+#    target_schema: PUBLIC
+#    stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
